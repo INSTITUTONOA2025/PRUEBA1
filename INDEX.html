@@ -7,23 +7,73 @@
   <style>
     body { margin:0; font-family:sans-serif; color:#1a1a1a; background:#f7f7f7; line-height:1.5; }
     header { position:relative; text-align:center; color:white; }
-    header::after { content:""; display:block; background:url('TU_IMG_HERO') center/cover no-repeat; opacity:0.4; position:absolute; top:0; left:0; right:0; bottom:0; }
-    header .hero { position:relative; padding:6rem 1rem; }
+    header::after {
+      content:"";
+      display:block;
+      background:url('https://images.unsplash.com/photo-1613145991295-ff5f3547eacf?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      opacity:0.4;
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      z-index: 0;
+    }
+    header .hero {
+      position:relative;
+      padding:6rem 1rem;
+      z-index: 1;
+    }
     header h1 { font-size:3rem; margin-bottom:1rem; }
     header p { font-size:1.2rem; margin-bottom:2rem; }
-    header a.cta { background:#c62828; color:white; padding:1rem 2rem; border-radius:6px; text-decoration:none; font-size:1.1rem; }
-    section { padding:4rem 1rem; max-width:900px; margin:0 auto; }
-    .about, .innovation { background:white; border-radius:8px; padding:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:2rem;}
-    .gallery { display:flex; flex-wrap:wrap; gap:8px; margin:2rem 0; }
-    .gallery img { width:calc(33% - 8px); border-radius:6px; }
-    .contact { text-align:center; }
+    header a.cta {
+      background:#c62828;
+      color:white;
+      padding:1rem 2rem;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:1.1rem;
+    }
+    section {
+      padding:4rem 1rem;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .about, .innovation {
+      background:white;
+      border-radius:8px;
+      padding:2rem;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom:2rem;
+    }
+    .gallery {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:2rem 0;
+      justify-content:center;
+    }
+    .gallery img {
+      width:calc(33% - 10px);
+      border-radius:6px;
+      object-fit:cover;
+      height: 200px;
+    }
+    .contact {
+      text-align:center;
+    }
     .contact h2 { font-size:2rem; margin-bottom:1rem;}
-    .contact a { color:#c62828; text-decoration:none; font-weight:bold; }
-    @media(max-width:600px){ header h1{font-size:2rem;} .gallery img{width:100%;} }
+    .contact a {
+      color:#c62828;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    @media(max-width:768px){
+      header h1{font-size:2rem;}
+      .gallery img{width:100%; height:auto;}
+    }
   </style>
 </head>
 <body>
 
+  <!-- HERO -->
   <header>
     <div class="hero">
       <h1>Celebramos 10 Años de SushiFeel</h1>
@@ -32,25 +82,29 @@
     </div>
   </header>
 
+  <!-- ACERCA DE -->
   <section id="about" class="about">
     <h2>Acerca de SushiFeel</h2>
-    <p>Desde el 22 de mayo de 2022, SushiFeel se consolidó como referente en gastronomía, combinando sabores de Asia y Perú. Un espacio para disfrutar, innovar y conectar con los sentidos.</p>
+    <p>Desde 2022, SushiFeel fusiona lo mejor de la cocina asiática con el espíritu latinoamericano. Ingredientes frescos, creatividad constante y una experiencia inolvidable en cada plato.</p>
   </section>
 
+  <!-- GALERÍA -->
   <section class="gallery">
-    <img src="TU_IMG1" alt="Plato destacado 1">
-    <img src="TU_IMG2" alt="Plato destacado 2">
-    <img src="TU_IMG3" alt="Plato destacado 3">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367e?auto=format&fit=crop&w=800&q=80" alt="Sushi 1">
+    <img src="https://images.unsplash.com/photo-1617196038435-e407b449b06d?auto=format&fit=crop&w=800&q=80" alt="Sushi 2">
+    <img src="https://images.unsplash.com/photo-1598514982846-cf30992a0074?auto=format&fit=crop&w=800&q=80" alt="Sushi 3">
   </section>
 
+  <!-- INNOVACIÓN -->
   <section class="innovation">
     <h2>Innovación y Tradición</h2>
-    <p>Nuestro menú se renueva dos veces al año. Ofrecemos opciones plant-based, sin gluten, vegetarianas y veganas. Ingredientes locales, equipo creativo, sabores únicos.</p>
+    <p>Nuestro menú se renueva dos veces al año. Ofrecemos opciones veganas, sin gluten y platos de autor. El equilibrio perfecto entre cocina de autor y respeto por la tradición japonesa.</p>
   </section>
 
+  <!-- CONTACTO -->
   <section class="contact" id="contact">
     <h2>¿Dónde encontrarnos?</h2>
-    <p>Dos sucursales: Yerba Buena y Barrio Norte.<br>Servicio de delivery disponible.</p>
+    <p>Dos sucursales: Yerba Buena y Barrio Norte. Servicio de delivery disponible.</p>
     <p><a href="#">Reservá tu mesa</a> | <a href="#">Hacé tu pedido online</a></p>
   </section>
 
